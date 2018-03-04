@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="css/material-icons.css">
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="css/style.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="A generic mapping tool that uses Google Maps API to add polygons, lines, markers, and other objects.">
+        <meta name="keywords" content="map, google map, line, polyon, markers, google api, maps api, mapping tool, maps, svg, mapping control">
+        <title>PolyMaps</title>
+    </head>
+    <body>
+        <ul id="slide-out" class="side-nav fixed show-on-medium">
+            <li class="no-padding">
+                <ul class="collapsible collapsible-accordion">
+                    <li>
+                        <a class="collapsible-header">Markers<i class="material-icons">arrow_drop_down</i></a>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li>
+                                    <a id="marker_toggle" href="#" class="blue lighten-3 waves-effect waves-light">
+                                        <i class="material-icons red-text">location_on</i><span>Start Adding Marker</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#marker_options" class="blue lighten-3 waves-effect waves-light modal-trigger">
+                                        <i class="material-icons red-text">settings</i><span>Marker Options</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            
+            
+        </ul> 
+        <a href="#" data-activates="slide-out" class="button-collapse hide"><i class="material-icons">menu</i></a>
+        <main id="map" class="blue-grey lighten-4">
+            
+        </main>
+
+        <!--Modals-->
+        <div id="marker_options" class="modal">
+            <div class="modal-content">
+                <h4>Marker Options</h4>
+                <div class="input-field col s6">
+                    <input id="marker_url" type="text" value="default">
+                    <label for="marker_url">Marker Icon URL</label>
+                </div>
+
+                
+                <div class="switch">
+                <label>Add Marker Labels at creation: </label> <br>
+                <label>
+                    Off
+                    <input type="checkbox" id="label_toggle">
+                    <span class="lever"></span>
+                    On
+                </label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" id="marker_set" class="modal-action modal-close waves-effect waves-green btn-flat">Save Settings</a>
+            </div>
+        </div>
+
+
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAghvknaT2pq1vtW1ncRwZW4AdfY7F1Wm0&callback=initMap"
+    async defer></script>
+    </body>
+</html>
